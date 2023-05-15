@@ -361,7 +361,7 @@ export function ChatActions(props: {
         </div>
       )}
 
-      <div
+      {/* <div
         className={`${chatStyle["chat-input-action"]} clickable`}
         onClick={nextTheme}
       >
@@ -372,7 +372,7 @@ export function ChatActions(props: {
         ) : theme === Theme.Dark ? (
           <DarkIcon />
         ) : null}
-      </div>
+      </div> */}
 
       <div
         className={`${chatStyle["chat-input-action"]} clickable`}
@@ -381,14 +381,14 @@ export function ChatActions(props: {
         <PromptIcon />
       </div>
 
-      <div
+      {/* <div
         className={`${chatStyle["chat-input-action"]} clickable`}
         onClick={() => {
           navigate(Path.Masks);
         }}
       >
         <MaskIcon />
-      </div>
+      </div> */}
     </div>
   );
 }

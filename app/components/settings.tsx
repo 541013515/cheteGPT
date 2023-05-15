@@ -350,7 +350,7 @@ export function Settings() {
             </Popover>
           </ListItem>
 
-          <ListItem
+          {/* <ListItem
             title={Locale.Settings.Update.Version(currentVersion ?? "unknown")}
             subTitle={
               checkingUpdate
@@ -373,7 +373,7 @@ export function Settings() {
                 onClick={() => checkUpdate(true)}
               />
             )}
-          </ListItem>
+          </ListItem> */}
 
           <ListItem title={Locale.Settings.SendKey}>
             <Select
@@ -393,7 +393,7 @@ export function Settings() {
             </Select>
           </ListItem>
 
-          <ListItem title={Locale.Settings.Theme}>
+          {/* <ListItem title={Locale.Settings.Theme}>
             <Select
               value={config.theme}
               onChange={(e) => {
@@ -408,9 +408,9 @@ export function Settings() {
                 </option>
               ))}
             </Select>
-          </ListItem>
+          </ListItem> */}
 
-          <ListItem title={Locale.Settings.Lang.Name}>
+          {/* <ListItem title={Locale.Settings.Lang.Name}>
             <Select
               value={getLang()}
               onChange={(e) => {
@@ -423,9 +423,9 @@ export function Settings() {
                 </option>
               ))}
             </Select>
-          </ListItem>
+          </ListItem> */}
 
-          <ListItem
+          {/* <ListItem
             title={Locale.Settings.FontSize.Title}
             subTitle={Locale.Settings.FontSize.SubTitle}
           >
@@ -442,9 +442,9 @@ export function Settings() {
                 )
               }
             ></InputRange>
-          </ListItem>
+          </ListItem> */}
 
-          <ListItem
+          {/* <ListItem
             title={Locale.Settings.SendPreviewBubble.Title}
             subTitle={Locale.Settings.SendPreviewBubble.SubTitle}
           >
@@ -458,9 +458,9 @@ export function Settings() {
                 )
               }
             ></input>
-          </ListItem>
+          </ListItem> */}
 
-          <ListItem
+          {/* <ListItem
             title={Locale.Settings.Mask.Title}
             subTitle={Locale.Settings.Mask.SubTitle}
           >
@@ -475,29 +475,25 @@ export function Settings() {
                 )
               }
             ></input>
-          </ListItem>
+          </ListItem> */}
         </List>
 
         <List>
-          {enabledAccessControl ? (
-            <ListItem
-              title={Locale.Settings.AccessCode.Title}
-              subTitle={Locale.Settings.AccessCode.SubTitle}
-            >
-              <PasswordInput
-                value={accessStore.accessCode}
-                type="text"
-                placeholder={Locale.Settings.AccessCode.Placeholder}
-                onChange={(e) => {
-                  accessStore.updateCode(e.currentTarget.value);
-                }}
-              />
-            </ListItem>
-          ) : (
-            <></>
-          )}
+          <ListItem
+            title={Locale.Settings.AccessCode.Title}
+            subTitle={Locale.Settings.AccessCode.SubTitle}
+          >
+            <PasswordInput
+              value={accessStore.accessCode}
+              type="text"
+              placeholder={Locale.Settings.AccessCode.Placeholder}
+              onChange={(e) => {
+                accessStore.updateCode(e.currentTarget.value);
+              }}
+            />
+          </ListItem>
 
-          {!accessStore.hideUserApiKey ? (
+          {/* {!accessStore.hideUserApiKey ? (
             <ListItem
               title={Locale.Settings.Token.Title}
               subTitle={Locale.Settings.Token.SubTitle}
@@ -511,9 +507,9 @@ export function Settings() {
                 }}
               />
             </ListItem>
-          ) : null}
+          ) : null} */}
 
-          <ListItem
+          {/* <ListItem
             title={Locale.Settings.Usage.Title}
             subTitle={
               showUsage
@@ -535,10 +531,10 @@ export function Settings() {
                 onClick={() => checkUsage(true)}
               />
             )}
-          </ListItem>
+          </ListItem> */}
         </List>
 
-        <List>
+        {/* <List>
           <ListItem
             title={Locale.Settings.Prompt.Disable.Title}
             subTitle={Locale.Settings.Prompt.Disable.SubTitle}
@@ -568,9 +564,9 @@ export function Settings() {
               onClick={() => setShowPromptModal(true)}
             />
           </ListItem>
-        </List>
+        </List> */}
 
-        <List>
+        {/*<List>
           <ModelConfigList
             modelConfig={config.modelConfig}
             updateConfig={(updater) => {
@@ -579,11 +575,11 @@ export function Settings() {
               config.update((config) => (config.modelConfig = modelConfig));
             }}
           />
-        </List>
+        </List> */}
 
-        {shouldShowPromptModal && (
+        {/* {shouldShowPromptModal && (
           <UserPromptModal onClose={() => setShowPromptModal(false)} />
-        )}
+        )} */}
       </div>
     </ErrorBoundary>
   );
