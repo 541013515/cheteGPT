@@ -4,7 +4,7 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized:
-      "本网站仅供学习，请前往[这里](https://dwz.cn/Bniqyw5V)购买学习卡体验卡进行学习。然后在设置页面输入学习卡密码进行学习。",
+      "本网站仅供学习，请前往[这里](https://dwz.cn/Bniqyw5V)购买学习卡体验卡进行学习。然后在左下角[设置](/#/settings)页面输入学习卡密码进行学习。",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 条对话`,
